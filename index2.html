@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Captured</title>
+</head>
+<body>
+  <h1>Thank you for logging in!</h1>
+  <p>Your credentials have been captured.</p>
+  <p>Email: <span id="email"></span></p>
+  <p>Password: <span id="password"></span></p>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const email = urlParams.get('email');
+    const password = urlParams.get('password');
+
+    document.getElementById('email').textContent = email;
+    document.getElementById('password').textContent = password;
+  </script>
+</body>
+</html>
